@@ -18,8 +18,8 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "//span[text()=' GİRİŞ YAP ']")
     public WebElement buttonLogin;
 
-    @FindBy(xpath ="//span[text()=' I. Student']")
-    public WebElement verifyText;
+    @FindBy(xpath ="//div[text()='Invalid username or password']")
+    public WebElement invalidText;
 
 
 

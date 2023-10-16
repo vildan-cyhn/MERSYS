@@ -1,15 +1,12 @@
 package StepDefinitions;
-
 import Pages.DialogContent;
 import Pages.LeftNav;
 import Utilities.WD;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.testng.Assert;
 
 public class Login {
-
     DialogContent dc=new DialogContent();
     LeftNav ln=new LeftNav();
 
@@ -24,12 +21,23 @@ public class Login {
         dc.sendKeysMethod(dc.inputPassword,"TechnoStudy123");
         dc.clickMethod   (dc.buttonLogin);}
 
-    @Then("Reach the Dashboard")
-    public void reachTheDashboard() {
-
+    @Then("User should login successfully")
+    public void userShouldLoginSuccessfully() {
 //        dc.verifyTextMethod(dc.verifyText,"Student");
-        dc.verifyTextMethod(ln.dashboard,"Dashboard");
-//        Assert.assertTrue(dc.verifyText.getText().contains("Student"),"Giriş yapılamadı.");
+        dc.verifyTextMethod(ln.dashboard,"Dashboard");}
 
-    }
+    @When("Enter unvalid username and password and click login button")
+    public void enterUnvalidUsernameAndPasswordAndClickLoginButton() {
+
+        dc.clickMethod   (dc.inputUserName);
+        dc.sendKeysMethod(dc.inputUserName,"teamten");
+        dc.clickMethod   (dc.inputPassword);
+        dc.sendKeysMethod(dc.inputPassword,"techteam");
+        dc.clickMethod   (dc.buttonLogin);}
+
+    @Then("User should not login successfully")
+    public void userShouldNotLoginSuccessfully() {
+        dc.verifyTextMethod(dc.invalidText,"Invalid");}
+
+
 }
