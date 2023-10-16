@@ -46,7 +46,7 @@ public class Parent {
 
       wait.until(ExpectedConditions.textToBePresentInElement(element,text));
 
-      Assert.assertTrue(element.getText().toLowerCase().contains(text.toLowerCase()));
+      Assert.assertTrue(element.getText().toLowerCase().contains(text.toLowerCase()),"Failed result.");
 
       new Actions(WD.getDriver()).sendKeys(Keys.ESCAPE).build().perform();
 
