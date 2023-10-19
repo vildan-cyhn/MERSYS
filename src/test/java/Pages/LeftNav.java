@@ -12,6 +12,19 @@ public class LeftNav extends Parent {
    @FindBy(xpath = "//span[text()='Dashboard ']")
    public WebElement dashboard;
 
+    public WebElement getWebElement(String strElement){
+        switch (strElement){
+            case "education"      : return this.education;
+            case "eduSetup"       : return this.eduSetup;
+            case "subjCat"        : return this.subjCat;
+            case "setup"          : return this.setup;
+            case "schoolSetup"    : return this.schoolSetup;
+            case "locations"      : return this.locations;
+            case "setupParameters": return this.setupParameters;
+            case "nationalities"  : return this.nationalities;
+
+
+        }return null;}
 
    //setup baslığı altındakiler*******************************************************************
    @FindBy(xpath = "(//span[text()='Setup'])[1]")
