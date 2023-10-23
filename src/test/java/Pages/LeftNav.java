@@ -22,6 +22,7 @@ public class LeftNav extends Parent {
             case "locations"      : return this.locations;
             case "setupParameters": return this.setupParameters;
             case "nationalities"  : return this.nationalities;
+            case "fields"         : return this.fields;
 
 
         }return null;}
