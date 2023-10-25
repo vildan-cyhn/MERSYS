@@ -27,7 +27,7 @@ Feature: Attestations
       | attestations  |
     And Click on the element in Dialog
       |editButton|
-    When  User fills the necessary data
+    When  User fills the necessary data //edit burda
       | name | newname2 |
     And Click on the element in Dialog
       | saveButton |
@@ -42,6 +42,6 @@ Feature: Attestations
       | deleteButton|
     And Click on the element in Dialog
       | deleteSecondButton  |
-    And User delete the element
+    And User delete the element // delete burda 
       | newname2 |
     Then User gets success message

@@ -1,7 +1,7 @@
 package StepDefinitions;
 
-import Pages.DialogContent_Ihs;
-import Pages.LeftNav_Ihs;
+import Pages.DialogContent;
+import Pages.LeftNav;
 import Utilities.WD;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
@@ -14,16 +14,15 @@ import org.openqa.selenium.interactions.Actions;
 import java.util.List;
 
 public class DocumentType {
-    LeftNav_Ihs lni=new LeftNav_Ihs();
-    DialogContent_Ihs dci=new DialogContent_Ihs();
-
-    @Given("Clicks on the element in LeftNav_Ihs")
-    public void clicksOnTheElementInLeftNav_Ihs(DataTable linkler) {
-        List<String> clicks = linkler.asList(String.class);
-
-        for (int i = 0; i < clicks.size(); i++) {
-            WebElement linkWebElement = lni.getWebElementI(clicks.get(i));
-            dci.clickMethod(linkWebElement);}}
+LeftNav ln=new LeftNav();
+DialogContent dc=new DialogContent();
+//    @Given("Clicks on the element in LeftNav")
+//    public void clicksOnTheElementInLeftNav(DataTable linkler) {
+//        List<String> clicks = linkler.asList(String.class);
+//
+//        for (int i = 0; i < clicks.size(); i++) {
+//            WebElement linkWebElement = ln.getWebElement(clicks.get(i));
+//            dc.clickMethod(linkWebElement);}}
 
 
 
@@ -33,9 +32,9 @@ public class DocumentType {
         List< List<String> >   items=  sendkeys.asLists(String.class);
 
         for (int i = 0; i < items.size(); i++) {
-            WebElement e=dci.getWebElement(items.get(i).get(0));
+            WebElement e=dc.getWebElement(items.get(i).get(0));
             String gidecekYazi = items.get(i).get(1);
-            dci.sendKeysMethod(e, gidecekYazi);}
+            dc.sendKeysMethod(e, gidecekYazi);}
     }
 
 
@@ -43,8 +42,8 @@ public class DocumentType {
     @And("select a stage type from down drop menu")
     public void selectAStageTypeFromDownDropMenu(){
 
-        dci.clickMethod(dci.stage);
-        dci.clickMethod(dci.stageEx);
+        dc.clickMethod(dc.stage);
+        dc.clickMethod(dc.stageEx);
         new Actions(WD.getDriver()).sendKeys(Keys.ESCAPE).build().perform();
 
 
@@ -59,7 +58,7 @@ public class DocumentType {
         List< List<String> > toBeEdited =  edits.asLists(String.class);
 
         for (int i = 0; i < toBeEdited.size(); i++) {
-            dci.editItem(toBeEdited.get(i).get(0),
+            dc.editItemI(toBeEdited.get(i).get(0),
                     toBeEdited.get(i).get(1),
                     toBeEdited.get(i).get(2));}
 
@@ -69,8 +68,8 @@ public class DocumentType {
     public void clickOnADifferentStageType() {
 
 
-        dci.clickMethod(dci.stage);
-        dci.clickMethod(dci.stageEm);
+        dc.clickMethod(dc.stage);
+        dc.clickMethod(dc.stageEm);
         new Actions(WD.getDriver()).sendKeys(Keys.ESCAPE).build().perform();
 
 
@@ -84,7 +83,7 @@ public class DocumentType {
         List< List<String> > toBeSearch =  search.asLists(String.class);
 
         for (int i = 0; i < toBeSearch.size(); i++) {
-            dci.searchFunction(toBeSearch.get(i).get(0));}
+            dc.searchFunctionI(toBeSearch.get(i).get(0));}
     }
 
     @And("User delete the elements")
@@ -92,7 +91,7 @@ public class DocumentType {
         List< List<String> > deleteElmnt =  deletes.asLists(String.class);
 
         for (int i = 0; i < deleteElmnt.size(); i++) {
-            dci.deleteItem(deleteElmnt.get(i).get(0));}}
+            dc.deleteItemI(deleteElmnt.get(i).get(0));}}
     }
 
 

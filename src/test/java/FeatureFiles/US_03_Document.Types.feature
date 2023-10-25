@@ -6,7 +6,7 @@ Feature: Document Types Management
     Then User should login successfully
 
   Scenario: Adding document type
-    Given Clicks on the element in LeftNav_Ihs
+    Given Clicks on the element in LeftNav
       | setup           |
       | setupParameters |
       | documentTypes   |
@@ -21,7 +21,7 @@ Feature: Document Types Management
     Then User gets success message
 
   Scenario: Editing document type
-    Given Clicks on the element in LeftNav_Ihs
+    Given Clicks on the element in LeftNav
       | setup           |
       | setupParameters |
       | documentTypes   |
@@ -33,7 +33,7 @@ Feature: Document Types Management
     Then User gets success message
 
   Scenario: search function on the page
-    Given Clicks on the element in LeftNav_Ihs
+    Given Clicks on the element in LeftNav
       | setup           |
       | setupParameters |
       | documentTypes   |
@@ -41,7 +41,7 @@ Feature: Document Types Management
       | Certificate |
 
   Scenario: Deleting document type
-    Given Clicks on the element in LeftNav_Ihs
+    Given Clicks on the element in LeftNav
       | setup           |
       | setupParameters |
       | documentTypes   |

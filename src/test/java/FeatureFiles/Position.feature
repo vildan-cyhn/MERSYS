@@ -6,7 +6,7 @@ Feature: Position Functionality
     Then User should login successfully
 
   Scenario: adding new Position
-    Given Clicks on the element in LeftNavV
+    Given Clicks on the element in LeftNav
       | humanResources |
       | hrSetup        |
       | positions      |
@@ -20,7 +20,7 @@ Feature: Position Functionality
     Then User gets success message
 
   Scenario: editing Position
-    Given Clicks on the element in LeftNavV
+    Given Clicks on the element in LeftNav
       | humanResources |
       | hrSetup        |
       | positions      |
@@ -33,7 +33,7 @@ Feature: Position Functionality
     Then User gets success message
 
   Scenario: search function on the page
-    Given Clicks on the element in LeftNavV
+    Given Clicks on the element in LeftNav
       | humanResources |
       | hrSetup        |
       | positions      |
@@ -42,12 +42,12 @@ Feature: Position Functionality
     And  user should see the active button
 
   Scenario: deleting saved Position
-    Given Clicks on the element in LeftNavV
+    Given Clicks on the element in LeftNav
       | humanResources |
       | hrSetup        |
       | positions      |
 
-    And User delete the elements
+    And User delete the elements in Position menu
       | CYBER SECURITY | CS123 |
     Then User gets success message
 
