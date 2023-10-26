@@ -1,8 +1,6 @@
 package Pages;
 
 import Utilities.WD;
-import io.cucumber.datatable.DataTable;
-import io.cucumber.java.en.And;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -12,7 +10,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
-import java.util.List;
 
 public class DialogContent extends Parent {
     public DialogContent() {
@@ -73,8 +70,6 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement deleteSecondButton;
 
-    @FindBy(xpath = "(//span[@class='mat-mdc-button-touch-target'])[12]")
-    public WebElement editButtonV;
 
     @FindBy(xpath = "//mat-slide-toggle//button[@role='switch']")
     public WebElement activeButton;
@@ -170,7 +165,7 @@ public class DialogContent extends Parent {
 
         wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"), 0));
 
-        clickMethod(editButtonV);
+        clickMethod(editButton);
 
         name.clear();
         name.sendKeys(newName);
@@ -268,7 +263,19 @@ public class DialogContent extends Parent {
 
     //Rabia
 
+    public void deleteItemR(String text){
 
+        sendKeysMethod(nameSearch, text);
+        // sendKeysMethod(codeSearch, mtn);
+        clickMethod(searchButton);
+
+        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"),0));
+
+        clickMethod(deleteButton);
+        clickMethod(deleteSecondButton);
+
+
+    }
 
 
 

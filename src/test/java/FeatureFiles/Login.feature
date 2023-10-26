@@ -1,3 +1,5 @@
+@Smoke
+@Regression
 Feature: Login functionality
 
 

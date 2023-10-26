@@ -1,5 +1,6 @@
-Feature: Subject Categories
+@Regression
 
+Feature: Subject Categories
   Background:
     Given Navigate to Mersys
     When  Enter username and password and click login button

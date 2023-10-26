@@ -1,10 +1,10 @@
-Feature:  Adding New Fields
+@Smoke
 
+Feature:  Fields Functionality
   Background:
     Given Navigate to Mersys
     When  Enter username and password and click login button
     Then User should login successfully
-
 
   Scenario: adding new fields
     Given Clicks on the element in LeftNav
@@ -39,17 +39,6 @@ Feature:  Adding New Fields
     And Click on the element in Dialog
       | saveButton |
     Then User gets success message
-
-#  Scenario: editing Subject Categories
-#    Given Clicks on the element in LeftNav
-#      | setup |
-#      | setupParameters  |
-#      | fields   |
-#    And User edit two elements
-#      | ets3534 |  eto12367| etoo12 |  eto12345|
-#    And Click on the element in Dialog
-#      | saveButton |
-#    Then User gets success message
 
 
   Scenario: search function on the page

@@ -4,7 +4,7 @@ import Pages.DialogContent;
 import io.cucumber.java.en.And;
 
 
-public class US_04_Ethem_StepDefinitons {
+public class Fields {
 DialogContent dc=new DialogContent();
 
 

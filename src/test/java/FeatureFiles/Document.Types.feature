@@ -1,5 +1,6 @@
-Feature: Document Types Management
+@Smoke
 
+Feature: Document Types Management
   Background:
     Given Navigate to Mersys
     When  Enter username and password and click login button

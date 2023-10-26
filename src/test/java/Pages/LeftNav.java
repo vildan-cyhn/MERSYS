@@ -33,7 +33,6 @@ public class LeftNav extends Parent {
 
         }return null;}
 
-   //setup baslığı altındakiler*******************************************************************
    @FindBy(xpath = "(//span[text()='Setup'])[1]")
    public WebElement setup;
 
@@ -93,7 +92,6 @@ public class LeftNav extends Parent {
 
 
 
-   //messaging baslığı altındakiler****************************************************************
    @FindBy(xpath = "//span[text()='Messaging']")
    public WebElement messaging;
 
@@ -105,7 +103,6 @@ public class LeftNav extends Parent {
 
 
 
-   //entranceExams baslığı altındakiler************************************************************
    @FindBy(xpath ="(//span[text()='Entrance Exams'])[1]")
    public WebElement entranceExams;
 
@@ -129,7 +126,6 @@ public class LeftNav extends Parent {
 
 
 
-   //student baslığı altındakiler*******************************************************************
    @FindBy(xpath = "//span[text()='Student']")
    public WebElement student;
 
@@ -139,7 +135,6 @@ public class LeftNav extends Parent {
 
 
 
-   //humanResources baslığı altındakiler*********************************************************
    @FindBy(xpath = "//span[text()='Human Resources']")
    public WebElement humanResources;
 
@@ -188,7 +183,6 @@ public class LeftNav extends Parent {
 
 
 
-    //inventory baslığı altındakiler*************************************************************
    @FindBy(xpath ="(//span[text()='Inventory'])[1]")
    public WebElement inventory;
 
@@ -210,7 +204,6 @@ public class LeftNav extends Parent {
 
 
 
-   //education baslığı altındakiler***************************************************************
    @FindBy(xpath = "//span[text()='Education']")
    public WebElement education;
 
@@ -271,7 +264,6 @@ public class LeftNav extends Parent {
 
 
 
-   //incidents baslığı altındakiler*****************************************************************
    @FindBy(xpath ="//span[text()='Incidents']")
    public WebElement incidents;
 

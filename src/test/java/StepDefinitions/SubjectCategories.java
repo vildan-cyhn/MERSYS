@@ -11,7 +11,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-public class Us_006_SubjectCategories {
+public class SubjectCategories {
     DialogContent dc=new DialogContent();
     LeftNav ln=new LeftNav();
 
