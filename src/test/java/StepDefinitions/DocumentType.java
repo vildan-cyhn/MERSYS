@@ -1,11 +1,9 @@
 package StepDefinitions;
 
 import Pages.DialogContent;
-import Pages.LeftNav;
 import Utilities.WD;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -14,15 +12,8 @@ import org.openqa.selenium.interactions.Actions;
 import java.util.List;
 
 public class DocumentType {
-LeftNav ln=new LeftNav();
 DialogContent dc=new DialogContent();
-//    @Given("Clicks on the element in LeftNav")
-//    public void clicksOnTheElementInLeftNav(DataTable linkler) {
-//        List<String> clicks = linkler.asList(String.class);
-//
-//        for (int i = 0; i < clicks.size(); i++) {
-//            WebElement linkWebElement = ln.getWebElement(clicks.get(i));
-//            dc.clickMethod(linkWebElement);}}
+
 
 
 
@@ -33,8 +24,8 @@ DialogContent dc=new DialogContent();
 
         for (int i = 0; i < items.size(); i++) {
             WebElement e=dc.getWebElement(items.get(i).get(0));
-            String gidecekYazi = items.get(i).get(1);
-            dc.sendKeysMethod(e, gidecekYazi);}
+            String sendingText = items.get(i).get(1);
+            dc.sendKeysMethod(e, sendingText);}
     }
 
 

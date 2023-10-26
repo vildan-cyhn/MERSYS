@@ -1,27 +1,15 @@
 package StepDefinitions;
 
 import Pages.DialogContent;
-import Pages.LeftNav;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import java.util.List;
 
 public class Position {
     DialogContent dc=new DialogContent();
-    LeftNav ln=new LeftNav();
 
-//    @Given("Clicks on the element in LeftNav")
-//    public void clicksOnTheElementInLeftNav(DataTable linkler) {
-//        List<String> clicks = linkler.asList(String.class);
-//
-//        for (int i = 0; i < clicks.size(); i++) {
-//            WebElement linkWebElement = ln.getWebElement(clicks.get(i));
-//            dc.clickMethod(linkWebElement);}
-//    }
 
 
     @And("User edit two elements in DCV")
@@ -40,10 +28,10 @@ public class Position {
 
     @And("User should see  the element")
     public void userShouldSeeTheElement(DataTable search) {
-        List< List<String> > aranacaklar =  search.asLists(String.class);
+        List< List<String> > searchItems =  search.asLists(String.class);
 
-        for (int i = 0; i < aranacaklar.size(); i++) {
-            dc.searchFunctionV(aranacaklar.get(i).get(0),aranacaklar.get(i).get(1));}
+        for (int i = 0; i < searchItems.size(); i++) {
+            dc.searchFunctionV(searchItems.get(i).get(0),searchItems.get(i).get(1));}
     }
     @And("user should see the active button")
     public void userShouldSeeTheActiveButton() {

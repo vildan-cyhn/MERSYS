@@ -41,6 +41,8 @@ Feature: Subject Categories
       | subjCat   |
     And User search the element
       | igdaudn |  78265457|
+    And  user should see the active button
+
 
 
 

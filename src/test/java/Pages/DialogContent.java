@@ -85,6 +85,12 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "(//span[@class='mat-option-text'])[5]")
     public WebElement certificateStage;
 
+    @FindBy(css="[formcontrolname='type'] [id='mat-select-value-5']")
+    public WebElement FieldType;
+
+    @FindBy(xpath="(//span[@class='mat-option-text'])[1]")
+    public WebElement FieldType2;
+
 
     public WebElement getWebElement(String strElement) {
         switch (strElement) {
@@ -120,9 +126,9 @@ public class DialogContent extends Parent {
         return null;
     }
 
-    public void deleteItem(String text, String mtn) {
+    public void deleteItem(String text, String value) {
         sendKeysMethod(nameSearch, text);
-        sendKeysMethod(codeSearch, mtn);
+        sendKeysMethod(codeSearch, value);
         clickMethod(searchButton);
 
         wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"), 0));
@@ -146,13 +152,13 @@ public class DialogContent extends Parent {
         code.sendKeys(newCode);
     }
 
-    public void searchFunction(String text, String mtn) {
+    public void searchFunction(String text, String value) {
         sendKeysMethod(nameSearch, text);
-        sendKeysMethod(codeSearch, mtn);
+        sendKeysMethod(codeSearch, value);
         clickMethod(searchButton);
         wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"), 0));
         Assert.assertEquals(text, nameLocAfterSearch.getText());
-        Assert.assertEquals(mtn, codeLocAfterSearch.getText());
+        Assert.assertEquals(value, codeLocAfterSearch.getText());
     }
 
     // vildan

@@ -23,7 +23,6 @@ public class Login {
 
     @Then("User should login successfully")
     public void userShouldLoginSuccessfully() {
-//        dc.verifyTextMethod(dc.verifyText,"Student");
         dc.verifyTextMethod(ln.dashboard,"Dashboard");}
 
     @When("Enter unvalid username and password and click login button")
