@@ -54,6 +54,8 @@ public class Us_006_SubjectCategories {
                     editlenecekler.get(i).get(2),
                     editlenecekler.get(i).get(3));}}
 
+
+
     @And("User delete the element")
     public void userDeleteTheElement(DataTable deletes) {
         List< List<String> > silinecekler =  deletes.asLists(String.class);
@@ -67,5 +69,17 @@ public class Us_006_SubjectCategories {
 
         for (int i = 0; i < aranacaklar.size(); i++) {
             dc.searchFunction(aranacaklar.get(i).get(0),aranacaklar.get(i).get(1));}
+    }
+
+    @And("User delete the element name")
+    public void userDeleteTheElementName(DataTable deletes) {
+        List<String> silinecekler =  deletes.asList(String.class);
+
+        for (int i = 0; i < silinecekler.size(); i++) {
+            dc.deleteItemR(silinecekler.get(i));}
+
+
+
+
     }
 }

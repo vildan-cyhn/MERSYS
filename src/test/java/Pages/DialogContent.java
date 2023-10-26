@@ -93,6 +93,33 @@ public class DialogContent extends Parent{
         clickMethod(deleteSecondButton);
     }
 
+
+    public void deleteItemR(String text){
+
+        sendKeysMethod(nameSearch, text);
+        // sendKeysMethod(codeSearch, mtn);
+        clickMethod(searchButton);
+
+        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"),0));
+
+        clickMethod(deleteButton);
+        clickMethod(deleteSecondButton);
+
+
+    }
+
+    public void editItemR(String oldName,String newName){
+        sendKeysMethod(nameSearch, oldName);
+        // sendKeysMethod(codeSearch, oldCode);
+        clickMethod(searchButton);
+
+        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"),0));
+
+        clickMethod(editButton);
+
+        name.clear();
+        name.sendKeys(newName);}
+
     // ama bu hep ortak degıl, mesela us 4 te type de var name ve code dan baska edıtlenecek, o kodu yazıp, olmazsa kırılma devam et yaparsak ortak olur
     // us 5 te name, code yok- name,shortname var, loc u ortak yapabılır msıın bak
     public void editItem(String oldName,String oldCode,String newName, String newCode){
