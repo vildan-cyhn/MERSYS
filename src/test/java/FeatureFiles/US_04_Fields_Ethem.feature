@@ -14,8 +14,10 @@ Feature:  Adding New Fields
     And Click on the element in Dialog
       | addButton  |
     When  User fills the necessary data
-      | name | etoo12 |
-      | code | eto12345|
+      | name | ets3534  |
+      | code | eto12367|
+    And FieldType status
+
     And Click on the element in Dialog
       | saveButton |
     Then User gets success message
@@ -27,15 +29,27 @@ Feature:  Adding New Fields
       | setupParameters  |
       | fields   |
     And User search the element
-      | etoo12 |  eto12345|
+      | ets3534 |  eto12367|
     And Click on the element in Dialog
       | editButton  |
     When  User fills the necessary data
-      | name | etoo12 |
-      | code | etooooo|
+      | name | etoo1225 |
+      | code | etooo5|
+    And FieldType status
     And Click on the element in Dialog
       | saveButton |
     Then User gets success message
+
+#  Scenario: editing Subject Categories
+#    Given Clicks on the element in LeftNav
+#      | setup |
+#      | setupParameters  |
+#      | fields   |
+#    And User edit two elements
+#      | ets3534 |  eto12367| etoo12 |  eto12345|
+#    And Click on the element in Dialog
+#      | saveButton |
+#    Then User gets success message
 
 
   Scenario: search function on the page
@@ -44,7 +58,7 @@ Feature:  Adding New Fields
       | setupParameters  |
       | fields   |
     And User search the element
-      | etoo12 |  eto12345|
+      | etoo1225 |  etooo5|
 
 
   Scenario: deleting fields
@@ -53,5 +67,8 @@ Feature:  Adding New Fields
       | setupParameters  |
       | fields   |
     And User delete the element
-      | etoo1 |  eto1234|
+      | etoo1225 |  etooo5|
     Then User gets success message
+
+
+
