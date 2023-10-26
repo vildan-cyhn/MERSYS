@@ -8,8 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
-public class DialogContent extends Parent{
-    public DialogContent(){PageFactory.initElements(WD.getDriver(),this);}
+public class DialogContent_Ethem extends Parent{
+    public DialogContent_Ethem(){PageFactory.initElements(WD.getDriver(),this);}
 
     @FindBy(xpath = "//*[@placeholder='Kullanıcı Adı']")
     public WebElement inputUserName;
@@ -65,6 +65,11 @@ public class DialogContent extends Parent{
     @FindBy(xpath="//button[@type='submit']")
     public WebElement deleteSecondButton;
 
+    @FindBy(css="[formcontrolname='type'] [id='mat-select-value-5']")
+    public WebElement FieldType;
+
+    @FindBy(xpath="(//span[@class='mat-option-text'])[1]")
+    public WebElement FieldType2;
 
     public WebElement getWebElement(String strElement){
         switch (strElement){
